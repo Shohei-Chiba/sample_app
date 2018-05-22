@@ -25,7 +25,6 @@ module ApplicationHelper
         flash_type.to_s
     end
   end
-<<<<<<< HEAD
   
   def bootstrap_class_for(flash_type)
     case flash_type
@@ -42,7 +41,3 @@ module ApplicationHelper
     end
   end
 end
-=======
-end
-
->>>>>>> 31fa9486edea99cf6168b5f19223dee959249132

@@ -11,24 +11,12 @@
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
-<<<<<<< HEAD
       <% flash.each do |key, value| %>
         <div class="alert <%= bootstrap_class_for(key) %>"><%= value %></div>
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
-=======
-     
-      <% flash.each do |key, value| %>
-        <div class="alert <%= bootstrap_class_for(key) %>"><%= value %></div>
-      <% end %>
-
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
-  
->>>>>>> 31fa9486edea99cf6168b5f19223dee959249132
     </div>
   </body>
 </html>
