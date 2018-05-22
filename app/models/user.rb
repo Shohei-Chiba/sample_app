@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+<<<<<<< HEAD
  has_many :microposts, dependent: :destroy
  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
  has_many :followed_users, through: :relationships, source: :followed
@@ -10,10 +11,17 @@ class User < ActiveRecord::Base
 
 
   validates :name,  presence: true, length: { maximum: 50 }
+=======
+ 
+ 
+  validates :name,  presence: true, length: { maximum: 50 }
+
+>>>>>>> 31fa9486edea99cf6168b5f19223dee959249132
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+<<<<<<< HEAD
 
  def feed
     Micropost.from_users_followed_by(self)
@@ -31,4 +39,6 @@ class User < ActiveRecord::Base
     relationships.find_by(followed_id: other_user.id).destroy
   end
 
+=======
+>>>>>>> 31fa9486edea99cf6168b5f19223dee959249132
 end

@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180522003730) do
 
   create_table "microposts", force: true do |t|
@@ -40,6 +41,17 @@ ActiveRecord::Schema.define(version: 20180522003730) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          default: 0,     null: false
+=======
+ActiveRecord::Schema.define(version: 20180510052228) do
+
+  create_table "users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+>>>>>>> 31fa9486edea99cf6168b5f19223dee959249132
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -47,7 +59,10 @@ ActiveRecord::Schema.define(version: 20180522003730) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+<<<<<<< HEAD
     t.boolean  "admin",                  default: false
+=======
+>>>>>>> 31fa9486edea99cf6168b5f19223dee959249132
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

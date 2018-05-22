@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
  
   before_action :authenticate_user!, :except=>[:show]
   before_action :admin_user,     only: :destroy
@@ -41,4 +42,10 @@ class UsersController < ApplicationController
       redirect_to(root_path) unless current_user.admin?
     end
 
+=======
+  def show
+   @user = User.find(params[:id])
+
+  end
+>>>>>>> 31fa9486edea99cf6168b5f19223dee959249132
 end

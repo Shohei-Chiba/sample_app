@@ -8,9 +8,17 @@ SampleApp::Application.routes.draw do
     end
   end
   
+<<<<<<< HEAD
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
 
+=======
+
+  devise_for :users, :controllers => {
+    :registrations => "registrations"
+  }
+  resources :users, only: [:show]
+>>>>>>> 31fa9486edea99cf6168b5f19223dee959249132
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
